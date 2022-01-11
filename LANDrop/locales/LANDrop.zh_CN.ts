@@ -134,27 +134,27 @@ Would you like to receive it?</source>
 <context>
     <name>FileTransferReceiver</name>
     <message>
-        <location filename="../filetransferreceiver.cpp" line="54"/>
+        <location filename="../filetransferreceiver.cpp" line="55"/>
         <source>Cannot create download path: </source>
         <translation>无法创建下载路径： </translation>
     </message>
     <message>
-        <location filename="../filetransferreceiver.cpp" line="58"/>
+        <location filename="../filetransferreceiver.cpp" line="59"/>
         <source>Download path is not writable: </source>
         <translation>下载路径不可写： </translation>
     </message>
     <message>
-        <location filename="../filetransferreceiver.cpp" line="151"/>
+        <location filename="../filetransferreceiver.cpp" line="152"/>
         <source>Unable to open file %1.</source>
         <translation>无法打开文件 %1。</translation>
     </message>
     <message>
-        <location filename="../filetransferreceiver.cpp" line="155"/>
+        <location filename="../filetransferreceiver.cpp" line="156"/>
         <source>Receiving file %1...</source>
         <translation>正在接收文件 %1...</translation>
     </message>
     <message>
-        <location filename="../filetransferreceiver.cpp" line="167"/>
+        <location filename="../filetransferreceiver.cpp" line="168"/>
         <source>Done!</source>
         <translation>完成！</translation>
     </message>
@@ -212,7 +212,12 @@ Would you like to receive it?</source>
 <context>
     <name>Main</name>
     <message>
-        <location filename="../main.cpp" line="58"/>
+        <location filename="../main.cpp" line="64"/>
+        <source>LANDrop already running</source>
+        <translation>LANDrop 正在运行</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="71"/>
         <source>Your system needs to support tray icon.</source>
         <translation>你的系统需要支持托盘图标。</translation>
     </message>

@@ -35,6 +35,8 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <QTranslator>
+#include <QLockFile>
+#include <QDir>
 
 #include "trayicon.h"
 
@@ -52,6 +54,16 @@ int main(int argc, char *argv[])
     QTranslator appTranslator;
     appTranslator.load(a.applicationName() + '.' + QLocale::system().name(), ":/locales", "", ".qm");
     a.installTranslator(&appTranslator);
+
+    QString path = QDir::temp().absoluteFilePath("LANDrop.lock");
+    QLockFile lock(path);
+    if(!lock.tryLock(500)) {
+        QMessageBox msgBox;
+        msgBox.setIcon(QMessageBox::Warning);
+        msgBox.setText(a.translate("Main","LANDrop already running"));
+        msgBox.exec();
+        return 1;
+    }
 
     try {
         if (!QSystemTrayIcon::isSystemTrayAvailable())
